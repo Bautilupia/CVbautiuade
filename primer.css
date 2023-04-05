@@ -1,17 +1,36 @@
 body {
-    background-color: #b5f0ffde;
+    background-color: white;
     font-size: large;
 }
 
 h1{
     font-family:Arial, Helvetica, sans-serif;
-    background-color:aquamarine;
+    margin: 30px;
 }
 
 
 
+nav ul {
+    background-color: #000E88;
+    padding: 50px;
+    display: flex;
+}
 
-img {
+ul li {
+    width: 218px;
+    height: 37px;
+    background: #47b32c;
+    margin: 20px;
+    padding: 10px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.div-imagen img {
     width: 500px; 
     height: 500px;
     border-radius: 64px; /* para redondear*/
@@ -20,10 +39,65 @@ img {
     padding: 20px; /* para separar los bordes dentro*/
 }
 
-.estilorojo {
-    color: red;
+.div-texto {
+    background-color: #CDCDCD;
+    border-radius: ;
 }
 
-.estiloazul {
-    color: blue;
+
+footer {
+    background-color: #444545;
+    bottom: 0;
+    color:white;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* practicando clase 5/04 */
+
+
+.contenedorcajas {
+    border: solid 2px;
+    background-color: grey;
+    width: 70%;
+    display: flex;
+}
+
+.colorboton {
+    color: black;
+    background-color: yellow;
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+}
+
+.colorboton1 {
+    color: black;
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+
+}
+
+.colorboton2 {
+    color: black;
+    background-color:aqua;
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+
 }
