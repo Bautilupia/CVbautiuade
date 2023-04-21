@@ -5,6 +5,8 @@
 body {
     background-color: white;
     font-size: large;
+    height: 100%;
+    width: 100%;
 }
 
 h1{
@@ -39,34 +41,39 @@ ul li a {
 
 .main1 {
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
-.div-imagen img {
-    width: 250px; 
-    height: 250px;
-    border-radius: 64px; /* para redondear*/
-    border: solid 5px; /* para acceder al border */
-    margin: 30px; /* para el espacio de toda la imagen fuera*/
-    padding: 20px; /* para separar los bordes dentro*/
+.div-imagen {
+    width: 30%; 
+    border-radius:64px; 
+    border: solid 5px; 
+    margin: 30px; 
+    padding: 10px; 
+    flex-wrap: wrap ;
+}
+
+img {
+    width: 100%;
+    height: 350px;
+    border-radius: 64px;
 }
 
 
 .div-texto {
     background-color: #CDCDCD;
-    position: absolute;
-    height: 170px;
-    width: 896px;
     padding: 20px;
-    left: 376px;
-    top: 310px;
+    left: 30%;
+    top: 50%;
     flex-wrap: wrap;
 }
 
 .categoria{
     font-family:'Arial, Helvetica, sans-serif';
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 17px;
 }
 
@@ -79,17 +86,17 @@ footer {
     height: 80px;
     width: 100%;
     box-sizing: border-box;
-    /*height: 60px;*/
-    position: absolute;
+    position: relative;
 }
 
 
-@media (max-width:992px){  /*como maximo*/
+@media (max-width:450px){  
+
     h1{
         font-size: 20px;
     }
 
-    .div-imagen img {
+    /*.div-imagen{
         width: 200px;
         height: 200px;
         border-radius: 25px;
@@ -100,9 +107,33 @@ footer {
         align-items: center;
         display:block;
         margin: auto;
+    }*/
+    .div-imagen {
+        width: 50%; 
+        height: auto;
+        border-radius: 64px; 
+        border: solid 5px; 
+        margin: 30px; 
+        padding: 10px; 
+        display: block;
+        flex-wrap: wrap;
+        margin: auto;
     }
+
+    img {
+        width: 100%;
+        height: 400px;
+    }
+
+
     .div-texto{
-        position: static;
+       position: static;
+        flex-wrap: wrap;
+        height: 25%;
+        width: 40%;
+        padding: 20px;
+        left: 376px;
+        top: 310px;
         flex-wrap: wrap;
     }
     
@@ -112,57 +143,4 @@ footer {
     }
 }
 
-@media (max-width:400px) {
-    .div-texto{
-        font-size: 15px;
-    }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* practicando clase 5/04 */
-
-
-.contenedorcajas {
-    border: solid 2px;
-    background-color: grey;
-    width: 70%;
-    display: flex;
-}
-
-.colorboton {
-    color: black;
-    background-color: yellow;
-    width: 100px;
-    height: 50px;
-    margin: 20px;
-}
-
-.colorboton1 {
-    color: black;
-    background-color: red;
-    width: 100px;
-    height: 50px;
-    margin: 20px;
-
-}
-
-.colorboton2 {
-    color: black;
-    background-color:aqua;
-    width: 100px;
-    height: 50px;
-    margin: 20px;
-
-}
