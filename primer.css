@@ -14,6 +14,16 @@ h1{
     margin: 30px;
 }
 
+input {                        /*no muestra el botón de menu */
+    display: none;     
+}
+label {                       /*no muestra la etiqueta ☰ */
+    display:none;
+}
+li:hover {                        /*determina la propiedad de cada botón cuando se posiciona encima*/
+    filter: brightness(110%);
+}
+
 nav ul {
     background-color: #0000aa;
     padding: 10px;
@@ -30,14 +40,13 @@ ul li {
     margin: 10px;
     padding: 5px;
     text-align: center;
+    cursor: pointer;
 }
 
 ul li a {
     color: black;
     text-decoration: none;
 }
-
-
 
 
 .main1 {
@@ -87,55 +96,81 @@ footer {
     background-color: #0000aa;
     bottom: 0;
     color:white;
-    padding: 30px;
+    padding: 35px;
     text-align: center;
     height: auto;
     width: 100%;
     box-sizing: border-box;
-    position:fixed;
-}
-/*
-@media (min-width:1005){
-    footer{
-        position: relative;
-    }
-}
-
-@media (min-width:912px){
-    footer{
-        position: relative;
-    }
+    margin-top: 11vh;
 }
 
 
-@media (max-width:910px){
-    footer{
-        position: relative;
-    }
+@media all and (max-width: 700px) {  /*cuando el dispositivo es como máximo de 700px*/
+
+
+nav ul {
+    display: none;
+    background-color: #0000aa;
+}
+
+input:checked  ~ ul{   /*muestra todas el contenido de todas las etiquetas ul */
+    display:block;
+    background-color: #0000aa;
+}
+  
+input:checked ~ label {   /*muestra todo el contenido de todas las etiquetas label */
+    background: lightgrey; 
+}
+  
+label:hover{                /*cambia el color de ☰ */
+    background: grey;
+    background-color: #0000aa;
+    width: 100%;
+    height: 20%;
+}
+
+li{                         /*elimina el margen  de cada botón */
+    margin: 0px;
+    text-align: center;
+}
+
+label {                      /* dibuja la etiqueta ☰  con formato botón */
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    background-color:#0000aa;
+    color: white;
+}
+
+ul{                          /*deja de mostrar el bloque contenedor de los botones horizontales */
+    display: none;
+    background-color:white;
 }
 
 
-@media (max-width:865px){
-    footer {
-        position: relative;
-    }
+
+ul li a{
+    text-decoration: none;
+    color: black;
+
 }
 
-*/
-@media (max-width:875px){
-    
-    footer {
-        position:relative;
-    }
+ul li a:hover{
+    color:rgb(123, 255, 255);
 }
-/*
-@media (max-width:756px){
+
+footer{
+    position: relative;
+}
+
+}
 
 
-    footer {
-        position: relative;
-    }
-}*/
 
 
 @media (max-width:565px){  
@@ -175,7 +210,7 @@ footer {
         flex-wrap: wrap;
         border-radius: 64px;
         height: 25%;
-        width: auto ;
+        width: 100% ;
         padding: 20px;
         left: 376px;
         top: 310px;
