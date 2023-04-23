@@ -92,10 +92,10 @@ footer {
     height: auto;
     width: 100%;
     box-sizing: border-box;
-    position:relative;
+    position:fixed;
 }
 /*
-@media (max-width:1220){
+@media (min-width:1005){
     footer{
         position: relative;
     }
@@ -121,14 +121,14 @@ footer {
     }
 }
 
-
+*/
 @media (max-width:875px){
     
     footer {
         position:relative;
     }
 }
-
+/*
 @media (max-width:756px){
 
 
