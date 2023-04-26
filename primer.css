@@ -152,7 +152,9 @@ ul{                          /*deja de mostrar el bloque contenedor de los boton
     background-color:white;
 }
 
-
+ul li {
+    width: auto;
+}
 
 ul li a{
     text-decoration: none;
